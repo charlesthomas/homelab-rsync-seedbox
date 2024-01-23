@@ -1,0 +1,18 @@
+_commit: v1.1.2
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+ingress: false
+labels: 'app: rsync-seedbox'
+name: rsync-seedbox
+namespace: rsync-seedbox
+pvc: false
+resources:
+- configmaps.yaml
+- cronjobs.yaml
+- external-secrets.yaml
+service: false
+serviceAccount: false
+upstreamURL: ''
+url: https://github.com/charlesthomas/homelab-rsync-seedbox
