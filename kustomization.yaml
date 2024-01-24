@@ -7,7 +7,6 @@ commonLabels:
   app: rsync-seedbox
 
 resources:
-- argocd-application.yaml
 - configmaps.yaml
 - cronjobs.yaml
 - external-secrets.yaml
