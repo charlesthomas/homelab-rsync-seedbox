@@ -1,13 +1,15 @@
-_commit: v1.1.2
-_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+_commit: v1.3.6
+_src_path: ./homelab-template
 additionalResources: ''
 backups: false
 helm: false
+ingSecret: ''
 ingress: false
 labels: 'app: rsync-seedbox'
 name: rsync-seedbox
 namespace: rsync-seedbox
 pvc: false
+reloader: false
 resources:
 - configmaps.yaml
 - cronjobs.yaml
