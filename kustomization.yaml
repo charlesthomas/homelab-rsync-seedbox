@@ -13,3 +13,20 @@ resources:
 - resources/cronjobs.yaml
 - resources/external-secrets.yaml
 - resources/namespaces.yaml
+patches:
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: rsync-seedbox
+      namespace: rsync-seedbox
+      annotations:
+        gethomepage.dev/href: https://rsync-seedbox.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: 
+        gethomepage.dev/group: 
+        gethomepage.dev/icon: rsync-seedbox
+        gethomepage.dev/name: rsync-seedbox
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress
