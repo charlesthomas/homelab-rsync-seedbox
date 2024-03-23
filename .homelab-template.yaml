@@ -1,9 +1,9 @@
-_commit: v1.6.2
+_commit: v1.8.2
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
 helm: false
-ingSecret: ''
+homepageEnabled: false
 ingress: false
 labels: 'app: rsync-seedbox'
 name: rsync-seedbox
