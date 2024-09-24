@@ -8,6 +8,6 @@ data:
   sync.sh: |-
     #!/bin/sh
     mkdir /root/.ssh
-    cp -v /ssh/* /root/.ssh
+    cp /ssh/* /root/.ssh
     chmod -R 600 /root/.ssh
     rsync --compress --delete-after --recursive --size-only --verbose seedbox:downloads/complete/ /complete/
