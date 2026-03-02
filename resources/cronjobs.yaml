@@ -4,9 +4,8 @@ metadata:
   name: rsync-seedbox
   namespace: rsync-seedbox
 spec:
-  suspended: true
   concurrencyPolicy: Forbid
-  schedule: "*/15 * * * *"
+  schedule: "*/5 * * * *"
   timeZone: America/Detroit
   jobTemplate:
     spec:
