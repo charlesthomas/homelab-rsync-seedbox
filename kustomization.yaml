@@ -5,8 +5,10 @@ namespace: rsync-seedbox
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-rsync-seedbox
-commonLabels:
-  app: rsync-seedbox
+labels:
+- includeSelectors: true
+  pairs:
+    app: rsync-seedbox
 
 resources:
 - resources/configmaps.yaml
