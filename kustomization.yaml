@@ -5,11 +5,21 @@ namespace: rsync-seedbox
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-rsync-seedbox
-commonLabels:
-  app: rsync-seedbox
+labels:
+- includeSelectors: true
+  pairs:
+    app: rsync-seedbox
 
 resources:
 - resources/configmaps.yaml
 - resources/cronjobs.yaml
 - resources/external-secrets.yaml
 - resources/namespaces.yaml
+configMapGenerator:
+- name: grafana-dashboard-rsync-seedbox
+  files:
+  - grafana/rsync-seedbox.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
